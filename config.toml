@@ -1,0 +1,26 @@
+[oracle]
+oracleHost = "oracledb.example.com"
+oraclePort = "1522"
+oracleUser = "oracle_monitor"
+oraclePassword = ""
+oracleSid = "DB"
+oracleMaxOpenCon = 100 # SetMaxOpenConns sets the maximum number of open connections to the database. 0 means unlimited
+oracleMaxIdleCon = 50  # SetMaxIdleConns sets the maximum number of connections in the idle connection pool. If n <= 0, no idle connections are retained
+
+
+[redis]
+redisHost = "192.168.200.150"
+redisPort = "6379"
+redisPassword = ""     # Empty string means no auth
+redisQueue = "default"
+redisMaxActiveCon = 100
+redisMaxIdleCon = 50
+
+[logging]
+logPath = "app.log"
+logLevel = "info"     # Possible values: debug, info, warning, error, fatal
+
+[app]
+appListenAddr = ""     # Empty string means all network interfaces
+appListenPort = "8080"
+appHandlerURI = "/api/redis"
